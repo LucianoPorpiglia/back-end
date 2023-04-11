@@ -90,9 +90,6 @@ const userLogin = async(req, res = response) => {
 
 const revalidateToken = async(req, res = response) => {
     
-    //puede ser asi
-    //const { uid, name } = req;
-    // o asi
     const uid = req.uid;
     const name = req.name;
 
@@ -100,6 +97,7 @@ const revalidateToken = async(req, res = response) => {
 
     res.json({
         ok: true,
+        uid, name,
         token
     })
 }
